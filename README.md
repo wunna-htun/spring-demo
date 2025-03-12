@@ -39,6 +39,9 @@ docker build -t demo-java-app .
 docker run -d -p 9090:8080 demo-java-app
 
 
+## Jar create command 
+java -jar target/your-project-name-version.jar
+
 
 ### Changes made:
 - Focused on the demo Java 17 Spring Boot app.
