@@ -29,7 +29,7 @@ Clone the repository to your local machine.
 
 
 ```bash
-git clone https://github.com/yourusername/demo-java-app.git
+git clone https://github.com/wunna-htun/spring-demo
 cd demo-java-app
 
 
