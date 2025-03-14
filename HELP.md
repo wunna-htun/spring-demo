@@ -113,32 +113,78 @@ docker push wunnahtun99/demo-java-app:latest
 
 ---
 
-### Kubernetes
+# Kubernetes Setup with Minikube
 
+### Starting and Stopping Minikube
+To start Minikube:
+```bash
 minikube start
-minikube stop 
+```
+To stop Minikube:
+```bash
+minikube stop
+```
 
-minikube dashboard 
+### Accessing Minikube Dashboard
+To open the Minikube dashboard:
+```bash
+minikube dashboard
+```
 
-minikube ip 
+### Get Minikube's IP Address
+To get Minikube's IP address:
+```bash
+minikube ip
+```
 
+### Docker Image Deployment
 
-Docker image is already exit 
-* service deploy
+If your Docker image already exists, follow these steps to deploy:
 
- `kubectl apply -f deployment.yaml
-  kubectl apply -f service.yaml
-`
+1. Apply the deployment configuration:
+    ```bash
+    kubectl apply -f deployment.yaml
+    ```
 
-kubectl get service
-kubectl cluster-info
-kubectl get pods
-kubectl logs
+2. Apply the service configuration:
+    ```bash
+    kubectl apply -f service.yaml
+    ```
 
+### Verify Deployment and Service
 
+1. To check the status of the services:
+    ```bash
+    kubectl get service
+    ```
 
+2. To check the cluster information:
+    ```bash
+    kubectl cluster-info
+    ```
 
+3. To check the running pods:
+    ```bash
+    kubectl get pods
+    ```
 
-port forword if you need
+4. To view the logs of a specific pod:
+    ```bash
+    kubectl logs <pod-name>
+    ```
 
+### Port Forwarding (If Needed)
+If you need to access the service externally, use port forwarding:
+```bash
 kubectl port-forward service/demo-java-app-service 8081:8080
+```
+This forwards **port 8080** of your service to **port 8081** on your local machine.
+
+---
+
+Feel free to customize this according to your project's needs! 🚀
+```
+
+You can copy and paste this into your **README.md**. Let me know if you need further adjustments!
+
+
