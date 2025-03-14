@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: demo-java-app
-          image: wunnahtun99/demo-java-app:latest
+          image: wunnahtun99/demo-java-app:latest  # Docker image on Docker Hub
           ports:
-            - containerPort: 8080
+            - containerPort: 8080  # Ensure this matches the port Spring Boot listens on

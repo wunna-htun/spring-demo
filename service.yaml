@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-java-app
+  name: demo-java-app-service
 spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30001  # You can choose a port in the range 30000-32767
   selector:
     app: demo-java-app
-
-
+  ports:
+    - protocol: TCP
+      port: 8080  # This is the port your service will be accessible on within the cluster
+#      targetPort: 8080  # This should match the container port your app is listening on
+      nodePort: 30090  # Port accessible from outside the cluster (30000-32767 range)
+  type: NodePort  # Minikube uses NodePort for external access
